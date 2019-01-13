@@ -15,34 +15,67 @@ var config = {
     messagingSenderId: "282524712234"
 };
 firebase.initializeApp(config);
-
-
 var database = firebase.database();
+var storage = firebase.storage();
 
 
 
-var firstName = database.ref("first-name");
-var lastName = database.ref("last-name");
+var storageRef = storage.ref();
 
-console.log(database);
 
-firstName.on('value',function(snapshot){
+
+
+var defaultPic = "very Cool Edit 1.jpg";
+var imagesRef = storageRef.child("images");
+var defaultPicRef = storageRef.child("images/"+ defaultPic);
+
+defaultPicRef.getDownloadURL()
+            .then(function(url){
+        $(".myFace").append("<img src=" + url + "></img>");
     
-    
-    
-    var name = snapshot.val();
-    $('.fName').html(name);
+                     
     
 });
 
 
-lastName.on('value',function(snapshot){
-    var name = snapshot.val();
-    $(".lName").html(name)
+
+
+
+
+
+
+
+
+console.log(imagesRef.getDownloadURL());
+
+
+
+
+
+// //Defaults to the image there
+// // var profilePic = "very Cool Edit 1.jpg";
+// // var spaceRef = imagesRef.child(profilePic);
+
+// console.log(spaceRef.fullpath);
+
+
+
+
+
+//Deals with my Name
+var myInfo = database.ref("info");
+//snapshot is the returned database key
+myInfo.on('value',function(snapshot){
+    var name = snapshot.val()["full-name"];
+    $('.fName').html(name["first-name"]);
+    $('.lName').html(name["last-name"]);
 });
 
 
 
 $(document).ready(function(){
+
+
+
 
 });
