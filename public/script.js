@@ -33,7 +33,7 @@ var defaultPicRef = storageRef.child("images/"+ defaultPic);
 
 defaultPicRef.getDownloadURL()
             .then(function(url){
-        $(".myFace").append("<img class='pfp' src=" + url + "></img>");
+        $(".myFace").append("<img class='pfp mx-auto d-block' src=" + url + "></img>");
          
 });
 
@@ -57,8 +57,7 @@ var myInfo = database.ref("info");
 //snapshot is the returned database key
 myInfo.on('value',function(snapshot){
     var name = snapshot.val()["full-name"];
-    $('.fName').html(name["first-name"]);
-    $('.lName').html(name["last-name"]);
+    $('.name').html(name["first-name"] +" "+ name["last-name"]);
 });
 
 

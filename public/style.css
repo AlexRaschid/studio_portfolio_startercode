@@ -15,8 +15,9 @@
 
 /* Portfolio Item CSS */
 .pfp{
-  width: 40%;
-  height: 70%;
+  width: 50%;
+  height: 110%;
+  border-radius: 50%;
 }
 
 /* Footer CSS */
@@ -24,3 +25,12 @@
 
 
 /* Button CSS */
+
+
+
+/*Outline Red Border for testing purposes*/
+*{
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+}
