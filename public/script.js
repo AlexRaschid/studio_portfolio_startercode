@@ -29,24 +29,14 @@ var defaultPic = "very Cool Edit 1.jpg";
 var imagesRef = storageRef.child("images");
 var defaultPicRef = storageRef.child("images/"+ defaultPic);
 
+
+
 defaultPicRef.getDownloadURL()
             .then(function(url){
-        $(".myFace").append("<img src=" + url + "></img>");
-    
-                     
-    
+        $(".myFace").append("<img class='pfp' src=" + url + "></img>");
+         
 });
 
-
-
-
-
-
-
-
-
-
-console.log(imagesRef.getDownloadURL());
 
 
 

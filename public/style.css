@@ -14,17 +14,13 @@
 
 
 /* Portfolio Item CSS */
-
-
+.pfp{
+  width: 40%;
+  height: 70%;
+}
 
 /* Footer CSS */
 
 
 
 /* Button CSS */
-
-
-
-body{
-    background-color: teal;
-}
