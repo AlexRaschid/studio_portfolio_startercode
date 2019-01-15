@@ -19,12 +19,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- NavBar -->
-      
+    <!-- NavBar -->
+
+    <div class="container-fluid">
+        <div class="row1 col-lg-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -36,27 +37,30 @@
                     </div>
                 </div>
             </nav>
+        </div>
+    </div> <!-- Header and About Section -->
+
     
     
-    <!-- Header and About Section -->
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="myFace col-md-6"></div>
 
-
-        <div>
-            <div class="myFace"></div>
-
-            <p class="fName">First Name</p>
-            <p class="lName">Last Name</p>
-
-            <div class="bio">
-
-
+                <div class="bio col-md-6">
+                    <p>Hey guys this is my webpage to display some of the projects ive worked on</p>
+                    <p class="name"></p>
+                </div>
             </div>
         </div>
+    </div>
+
 
 
     <!-- Portfolio Grid Section -->
 
-
+    
 
 
 
@@ -67,11 +71,11 @@
 
 
     <!--End of container-->
-    </div>
-    
-    
-    
-    
+
+
+
+
+
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-database.js"></script>
